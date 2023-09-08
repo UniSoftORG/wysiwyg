@@ -1,0 +1,23 @@
+.editorWrapper {
+  background: #181a1f;
+  width: 100%;
+  border-radius: 16px;
+  padding: 0.75rem 0.75rem 1rem 0.75rem;
+}
+
+.editorWrapper ol {
+  margin-left: 1rem;
+  list-style-type: decimal;
+}
+
+.editorWrapper ul {
+  margin-left: 1rem;
+  list-style-type: disc;
+}
+
+.editorContainer {
+  width: 100%;
+  border: 1px solid #292c33;
+  border-radius: 16px;
+  padding: 1rem;
+}

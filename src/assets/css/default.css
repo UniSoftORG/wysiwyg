@@ -1,0 +1,16 @@
+div.DraftEditor-editorContainer,
+div.public-DraftEditor-content {
+  min-height: 10rem;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
