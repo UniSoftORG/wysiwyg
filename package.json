@@ -1,6 +1,6 @@
 {
   "name": "unisoft-wysiwyg",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "WYSIWYG Editor based on DraftJS",
   "scripts": {
     "build": "tsc && node tools/build-css.js",
