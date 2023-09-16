@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "WYSIWYG Editor based on DraftJS",
   "scripts": {
-    "build": "tsc && node tools/build-css.js",
+    "build": "tsup",
     "docs": "typedoc --out docs src",
     "lint": "eslint \"src/**/*\"",
-    "format": "prettier --write src/**/*",
+    "format": "prettier --write src/**/*.ts src/**/*.tsx",
     "check-format": "prettier --check src/**/*"
   },
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/index.css",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UniSoftORG/wysiwyg.git"
@@ -28,17 +34,19 @@
   "dependencies": {
     "draft-js": "^0.11.7"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
+    "@swc/core": "^1.3.85",
     "@types/draft-js": "^0.11.12",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
-    "clean-css": "^5.3.2",
-    "clean-css-cli": "^5.6.2",
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "ts-loader": "^9.4.4",
+    "tsup": "^7.2.0",
     "typedoc": "^0.25.1",
     "typescript": "^5.2.2"
   }

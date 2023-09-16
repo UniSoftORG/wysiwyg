@@ -1,6 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
 import {IEditor} from "@wysiwyg";
-import style from "../assets/css/editor.module.css";
 import { convertFromRaw, Editor, EditorState } from "draft-js";
 import {
   handleKeyCommand,
@@ -30,10 +29,10 @@ const UNIEditor: React.FC<IEditor> = ({ onChange, initialState }) => {
   }, [editorState]);
 
   return (
-    <div className={style.editorWrapper}>
+    <div className={`editorWrapper`}>
       <Toolbar editorState={editorState} setEditorState={setEditorState} />
       <div
-        className={style.editorContainer}
+        className={`editorContainer`}
         onFocus={() => editor.current && editor.current.focus()}
       >
         <Editor

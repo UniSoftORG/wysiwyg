@@ -1,6 +1,5 @@
 import React from "react";
 import { EditorState } from "draft-js";
-import style from "../assets/css/toolbar.module.css";
 import { toolBarOptions } from "../utils/ToolBarOptions";
 import { loadToolBar } from "../utils/toolBarUtils";
 
@@ -20,13 +19,13 @@ const Toolbar: React.FC<{
   const { isActive, applyStyle } = loadToolBar(editorState, setEditorState);
 
   return (
-    <div className={style.toolBarItems}>
+    <div className={`toolBarItems`}>
       {toolBarOptions.map((item, idx) => (
         <div
           key={`${item.label}-${idx}`}
-          className={`${style.toolBarItem} ${
+          className={`${`toolBarItem`} ${
             isActive(item.style ? item.style : "", item.method)
-              ? style.active
+              ? `active`
               : ""
           }`}
           onClick={(e) => applyStyle(item.style ? item.style : "", item.method)}

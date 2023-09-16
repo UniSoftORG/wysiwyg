@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {IEditor} from "@wysiwyg";
-import "../assets/css/default.css";
+import "../assets/style.css";
 import UNIEditor from "./Editor";
 
 /**
