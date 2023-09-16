@@ -16,8 +16,6 @@ This WYSIWYG editor package is an extraction from UniSoft's robust website build
 - **Lists**: Create a numeric or dotted list
 
 ## Coming Soon
-- Text Color Change
-- Font Size Adjustment
 - Code Block Support
 - Image & File Uploading
 - Image Editing (Resize, Crop, Position)
@@ -36,14 +34,28 @@ Or
 
 ## Usage Example
 
-`
-import "unisoft-wysiwyg";
-import { EditorLoader } from 'unisoft-wysiwyg';
-`
+```
+import "unisoft-wysiwyg/dist/index.css"
+import { EditorLoader } from "unisoft-wysiwyg"
 
-`const MyComponent = () => {
-return <EditorLoader onChange={handleChange} initialState={initialState} />;
-};`
+
+const MyComponent = () => {
+return <EditorLoader onChange={handleChange} />;
+};
+```
+
+## Render HTML Example
+
+
+```
+import "unisoft-wysiwyg/dist/index.css";
+import { RenderHTML } from "unisoft-wysiwyg";
+
+
+const MyComponent = () => {
+return <RenderHTML rawString={test} />;
+};
+```
 
 ## Contributing
 
