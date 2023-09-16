@@ -1,5 +1,5 @@
 import { MethodType } from "./enums";
-import {EditorState, RawDraftContentState} from "draft-js";
+import { EditorState, RawDraftContentState } from "draft-js";
 import React from "react";
 
 export interface IEditor {

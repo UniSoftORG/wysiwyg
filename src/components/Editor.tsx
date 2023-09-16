@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IEditor } from "../@wysiwyg";
-import {convertFromRaw, convertToRaw, Editor, EditorState} from "draft-js";
+import { convertFromRaw, convertToRaw, Editor, EditorState } from "draft-js";
 import {
   handleKeyCommand,
   keyBindingFn,
