@@ -1,10 +1,15 @@
 import { MethodType } from "./enums";
-import { RawDraftContentState } from "draft-js";
+import {EditorState, RawDraftContentState} from "draft-js";
 import React from "react";
 
 export interface IEditor {
   onChange: (editorState: any) => void;
   initialState?: RawDraftContentState;
+}
+
+export interface ToolBarProps {
+  editorState: EditorState;
+  setEditorState: (state: EditorState) => void;
 }
 
 export interface ToolBarItem {

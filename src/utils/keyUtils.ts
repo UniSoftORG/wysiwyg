@@ -102,12 +102,12 @@ export const myBlockStyleFn = (contentBlock: ContentBlock): string => {
   switch (type) {
     case "blockQuote":
       return "superFancyBlockquote";
-    case "align-left":
-      return "align-left";
-    case "align-center":
-      return "align-center";
-    case "align-right":
-      return "align-right";
+    case "text-left":
+      return "text-left";
+    case "text-center":
+      return "text-center";
+    case "text-right":
+      return "text-right";
     case "justifyAlign":
       return "justifyAlign";
     case "code-block":

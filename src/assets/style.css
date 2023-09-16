@@ -1,44 +1,61 @@
-div.DraftEditor-editorContainer,
-div.public-DraftEditor-content {
-  min-height: 10rem;
+:root {
+  --min-height-editor: 10rem;
+  --default-padding: 0.75rem;
+  --border-radius: 16px;
+  --dark-bg: #181a1f;
+  --darker-bg: #060708;
+  --border-color: #292c33;
+  --tool-bar-size: 2.5rem;
+  --transition-duration: 0.3s;
 }
 
-.align-left {
+div.DraftEditor-editorContainer, div.public-DraftEditor-content {
+  min-height: var(--min-height-editor);
+}
+
+.unisoft {
+  width: 100%;
+}
+
+.unisoft .text-left, .unisoft .text-center, .unisoft .text-right {
+  text-align: inherit;
+}
+
+.unisoft .text-left {
   text-align: left;
 }
 
-.align-center {
+.unisoft .text-center {
   text-align: center;
 }
 
-.align-right {
+.unisoft .text-right {
   text-align: right;
 }
 
-.editorWrapper {
-  background: #181a1f;
-  width: 100%;
-  border-radius: 16px;
-  padding: 0.75rem 0.75rem 1rem 0.75rem;
+.unisoft ol, .unisoft ul {
+  margin-left: 1rem;
+  list-style-type: inherit;
 }
 
-.editorWrapper ol {
+.unisoft ol {
   list-style-type: decimal;
 }
 
-.editorWrapper ul {
+.unisoft ul {
   list-style-type: disc;
 }
 
-.editorWrapper ol,
-.editorWrapper ul {
-  margin-left: 1rem;
+.editorWrapper, .editorContainer {
+  width: 100%;
+  background: var(--dark-bg);
+  border-radius: var(--border-radius);
+  padding: var(--default-padding) var(--default-padding) 1rem;
 }
 
-.editorContainer {
-  width: 100%;
-  border: 1px solid #292c33;
-  border-radius: 16px;
+.editorContainer .public-DraftEditor-content {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
   padding: 1rem;
 }
 
@@ -47,7 +64,7 @@ div.public-DraftEditor-content {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--default-padding);
 }
 
 .toolBarItems > * {
@@ -59,32 +76,30 @@ div.public-DraftEditor-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--tool-bar-size);
+  height: var(--tool-bar-size);
   cursor: pointer;
-  padding: 0.75rem;
+  padding: var(--default-padding);
   border-radius: 100%;
-  transition: all 0.3s;
+  transition: all var(--transition-duration);
   background: #1f2229;
-  border: 1px solid #292c33;
-  box-shadow:
-          rgba(0, 0, 0, 0.25) 0px 14px 28px,
-          rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .toolBarItem span {
   top: -2px;
 }
 
-.toolBarItem.active {
-  background: #060708;
+.toolBarItem.active, .toolBarDropdownItem:hover {
+  background: var(--darker-bg);
 }
 
 .toolBarDropdownContent {
   position: absolute;
   top: 125%;
   border-radius: 20px;
-  background: #060708;
+  background: var(--darker-bg);
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -92,9 +107,4 @@ div.public-DraftEditor-content {
 
 .toolBarDropdownItem {
   padding: 0 1rem;
-  background: #060708;
-}
-
-.toolBarDropdownItem:hover {
-  background: #1f2229;
 }

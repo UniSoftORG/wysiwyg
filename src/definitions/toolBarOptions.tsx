@@ -43,19 +43,19 @@ export const toolBarOptions: ToolBarItem[] = [
   },
   {
     label: "Left",
-    style: "align-left",
+    style: "text-left",
     icon: <Icons.AlignLeftIcon />,
     method: MethodType.Block,
   },
   {
     label: "Center",
-    style: "align-center",
+    style: "text-center",
     icon: <Icons.AlignCenterIcon />,
     method: MethodType.Block,
   },
   {
     label: "Right",
-    style: "align-right",
+    style: "text-right",
     icon: <Icons.AlignRightIcon />,
     method: MethodType.Block,
   },
