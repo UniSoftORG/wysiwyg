@@ -59,7 +59,6 @@ export function loadToolBar(
     const currentStyleList = currentStyles
       .toArray()
       .filter((style) => style !== undefined && styleList.includes(style));
-    console.log("applyStyles", currentStyles);
 
     // Removing styles in one go
     let nextContentState = currentContent;

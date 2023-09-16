@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IEditor } from "../@wysiwyg";
-import { convertFromRaw, Editor, EditorState } from "draft-js";
+import { convertFromRaw, convertToRaw, Editor, EditorState } from "draft-js";
 import {
   handleKeyCommand,
   keyBindingFn,
@@ -30,7 +30,8 @@ const UNIEditor: React.FC<IEditor> = ({ onChange, initialState }) => {
   }, [editorState]);
 
   return (
-    <div className={`editorWrapper`}>
+    <div className={`unisoft editorWrapper`}>
+      {/*{JSON.stringify(convertToRaw(editorState.getCurrentContent()))}*/}
       <Toolbar editorState={editorState} setEditorState={setEditorState} />
       <div
         className={`editorContainer`}

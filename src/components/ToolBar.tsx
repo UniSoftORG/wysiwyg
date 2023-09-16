@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { ToolBarProps } from "../@wysiwyg";
 import { loadToolBar } from "../utils/toolBarUtils";
-import { EditorState, SelectionState } from "draft-js";
+import { SelectionState } from "draft-js";
 import { toolBarOptions } from "../definitions/toolBarOptions";
 import SelectTool from "./ToolBar/SelectTool";
 
@@ -12,11 +13,7 @@ import SelectTool from "./ToolBar/SelectTool";
  * @param {any} editor - The editor component.
  * @return {ReactElement} The rendered toolbar component.
  */
-const Toolbar: React.FC<{
-  editorState: EditorState;
-  setEditorState: (state: EditorState) => void;
-  editor?: any;
-}> = ({ editorState, setEditorState }) => {
+const Toolbar: React.FC<ToolBarProps> = ({ editorState, setEditorState }) => {
   const { isActive, applyStyle, handleSelectChange, activeStyles } =
     loadToolBar(editorState, setEditorState);
   const [tempSelection, setTempSelection] = useState<SelectionState | null>(

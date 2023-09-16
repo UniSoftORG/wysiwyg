@@ -33,6 +33,8 @@
   "homepage": "https://github.com/UniSoftORG/wysiwyg#readme",
   "dependencies": {
     "draft-js": "^0.11.7",
+    "draft-js-export-html": "^1.4.1",
+    "html-react-parser": "^4.2.2",
     "unisoft-utils": "^1.0.3"
   },
   "peerDependencies": {
