@@ -36,7 +36,9 @@ Or
 
 ## Usage Example
 
-`import { EditorLoader } from 'unisoft-wysiwyg';';
+`
+import "unisoft-wysiwyg";
+import { EditorLoader } from 'unisoft-wysiwyg';
 `
 
 `const MyComponent = () => {

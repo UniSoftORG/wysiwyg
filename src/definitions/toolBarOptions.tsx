@@ -1,8 +1,8 @@
 import React from "react";
 import Icons from "../assets/icons";
 import {ToolBarItem} from "@wysiwyg";
-// For some reason it's not recognizing enums with path imort, so we are doing it manually for now
 import {MethodType} from "../@wysiwyg/enums";
+import {selectColorOptions} from "../definitions/colors";
 
 export const toolBarOptions: ToolBarItem[] = [
   {
@@ -58,5 +58,11 @@ export const toolBarOptions: ToolBarItem[] = [
     style: "align-right",
     icon: <Icons.AlignRightIcon />,
     method: MethodType.Block,
+  },
+  {
+    label: "Font Color",
+    method: MethodType.Color,
+    icon: <Icons.FontColorIcon />,
+    select: selectColorOptions
   },
 ];

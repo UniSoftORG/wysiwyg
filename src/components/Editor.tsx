@@ -7,6 +7,7 @@ import {
   myBlockStyleFn,
 } from "../utils/keyUtils";
 import Toolbar from "./ToolBar";
+import {styleMap} from "../definitions/style";
 
 /**
  * Renders a UNIEditor component.
@@ -38,6 +39,7 @@ const UNIEditor: React.FC<IEditor> = ({ onChange, initialState }) => {
         <Editor
           ref={editor}
           editorState={editorState}
+          customStyleMap={styleMap}
           handleKeyCommand={(
             command: string,
             editorState: EditorState,
