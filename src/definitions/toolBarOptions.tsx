@@ -1,8 +1,8 @@
-import React from "react";
 import Icons from "../assets/icons";
-import {ToolBarItem} from "@wysiwyg";
-import {MethodType} from "../@wysiwyg/enums";
-import {selectColorOptions} from "../definitions/colors";
+import { ToolBarItem } from "@wysiwyg";
+import { MethodType } from "../@wysiwyg/enums";
+import { selectColorOptions } from "./colors";
+import { selectFontOptions } from "./fontSizes";
 
 export const toolBarOptions: ToolBarItem[] = [
   {
@@ -63,6 +63,12 @@ export const toolBarOptions: ToolBarItem[] = [
     label: "Font Color",
     method: MethodType.Color,
     icon: <Icons.FontColorIcon />,
-    select: selectColorOptions
+    select: selectColorOptions,
+  },
+  {
+    label: "Font Size",
+    icon: <Icons.FontSizeIcon />,
+    method: MethodType.FontSize,
+    select: selectFontOptions,
   },
 ];

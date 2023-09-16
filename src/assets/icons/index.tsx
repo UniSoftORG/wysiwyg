@@ -9,6 +9,7 @@ import AlignRightIcon from "./AlignRight";
 import AlignLeftIcon from "./AlignLeft";
 import AlignCenterIcon from "./AlignCenter";
 import FontColorIcon from "./FontColor";
+import FontSizeIcon from "./FontSize";
 
 export default {
   BoldIcon,
@@ -20,5 +21,6 @@ export default {
   AlignRightIcon,
   AlignLeftIcon,
   AlignCenterIcon,
-  FontColorIcon
+  FontColorIcon,
+  FontSizeIcon,
 };

@@ -1,5 +1,6 @@
 import { MethodType } from "./enums";
-import {RawDraftContentState} from "draft-js";
+import { RawDraftContentState } from "draft-js";
+import React from "react";
 
 export interface IEditor {
   onChange: (editorState: any) => void;
@@ -13,4 +14,23 @@ export interface ToolBarItem {
   method: MethodType;
   select?: any;
   handleFunction?: any;
+}
+
+export interface StyleMap {
+  [key: string]: React.CSSProperties;
+}
+
+export interface IDropDownItemProps {
+  label: string;
+  style: string;
+  onClick: (e: string) => void;
+  isGrid?: boolean;
+}
+
+export interface DropdownSelectProps {
+  label: string;
+  children: React.ReactElement<IDropDownItemProps>[];
+  value: string | null;
+  onFocus?: any;
+  gridRows?: number;
 }

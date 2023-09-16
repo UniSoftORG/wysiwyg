@@ -1,3 +1,3 @@
 export type ColorStyleMap = {
-    [key in string]: string;
+  [key in string]: string;
 };

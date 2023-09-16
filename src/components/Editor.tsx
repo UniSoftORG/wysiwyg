@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from "react";
-import {IEditor} from "@wysiwyg";
+import React, { useEffect, useRef, useState } from "react";
+import { IEditor } from "../@wysiwyg";
 import { convertFromRaw, Editor, EditorState } from "draft-js";
 import {
   handleKeyCommand,
@@ -7,7 +7,7 @@ import {
   myBlockStyleFn,
 } from "../utils/keyUtils";
 import Toolbar from "./ToolBar";
-import {styleMap} from "../definitions/style";
+import { styleMap } from "../definitions/style";
 
 /**
  * Renders a UNIEditor component.

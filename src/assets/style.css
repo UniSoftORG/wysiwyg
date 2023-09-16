@@ -23,13 +23,16 @@ div.public-DraftEditor-content {
 }
 
 .editorWrapper ol {
-  margin-left: 1rem;
   list-style-type: decimal;
 }
 
 .editorWrapper ul {
-  margin-left: 1rem;
   list-style-type: disc;
+}
+
+.editorWrapper ol,
+.editorWrapper ul {
+  margin-left: 1rem;
 }
 
 .editorContainer {
@@ -42,12 +45,9 @@ div.public-DraftEditor-content {
 .toolBarItems {
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 1fr 1fr;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 0.75rem;
-}
-
-.toolBarItems > :first-child {
-  margin-left: 0;
 }
 
 .toolBarItems > * {
@@ -55,6 +55,12 @@ div.public-DraftEditor-content {
 }
 
 .toolBarItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
   padding: 0.75rem;
   border-radius: 100%;
@@ -66,6 +72,29 @@ div.public-DraftEditor-content {
           rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+.toolBarItem span {
+  top: -2px;
+}
+
 .toolBarItem.active {
   background: #060708;
+}
+
+.toolBarDropdownContent {
+  position: absolute;
+  top: 125%;
+  border-radius: 20px;
+  background: #060708;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolBarDropdownItem {
+  padding: 0 1rem;
+  background: #060708;
+}
+
+.toolBarDropdownItem:hover {
+  background: #1f2229;
 }

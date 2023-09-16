@@ -1,26 +1,25 @@
-import React from "react";
-import {transformedColorStyleMap} from "./colors";
+import { transformedColorStyleMap } from "./colors";
+import { fontSizeMap } from "./fontSizes";
+import { StyleMap } from "../@wysiwyg";
 
-interface StyleMap {
-    [key: string]: React.CSSProperties;
-}
 export const styleMap: StyleMap = {
-    HIGHLIGHT: {
-        backgroundColor: "#F7A5F7",
-    },
-    UPPERCASE: {
-        textTransform: "uppercase",
-    },
-    LOWERCASE: {
-        textTransform: "lowercase",
-    },
-    SUPERSCRIPT: {
-        verticalAlign: "super",
-        fontSize: "80%",
-    },
-    SUBSCRIPT: {
-        verticalAlign: "sub",
-        fontSize: "80%",
-    },
-    ...transformedColorStyleMap,
+  HIGHLIGHT: {
+    backgroundColor: "#F7A5F7",
+  },
+  UPPERCASE: {
+    textTransform: "uppercase",
+  },
+  LOWERCASE: {
+    textTransform: "lowercase",
+  },
+  SUPERSCRIPT: {
+    verticalAlign: "super",
+    fontSize: "80%",
+  },
+  SUBSCRIPT: {
+    verticalAlign: "sub",
+    fontSize: "80%",
+  },
+  ...transformedColorStyleMap,
+  ...fontSizeMap,
 };

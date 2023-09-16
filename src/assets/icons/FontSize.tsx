@@ -10,8 +10,7 @@ const FontColorIcon = () => (
     width="1em"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path fill="none" d="M0 0h24v24H0z"></path>
-    <path d="M2 20h20v4H2v-4zm3.49-3h2.42l1.27-3.58h5.65L16.09 17h2.42L13.25 3h-2.5L5.49 17zm4.42-5.61l2.03-5.79h.12l2.03 5.79H9.91z"></path>
+    <path d="m22 6-3-4-3 4h2v4h-2l3 4 3-4h-2V6zM9.307 4l-6 16h2.137l1.875-5h6.363l1.875 5h2.137l-6-16H9.307zm-1.239 9L10.5 6.515 12.932 13H8.068z"></path>
   </svg>
 );
 export default FontColorIcon;

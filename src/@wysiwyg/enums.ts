@@ -3,5 +3,5 @@ export enum MethodType {
   Alignment = "alignment",
   Inline = "inline",
   Color = "color",
-  FontSize = "font-size"
+  FontSize = "font",
 }
